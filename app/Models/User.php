@@ -29,4 +29,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+        public function overlaySetting()
+    {
+    return $this->hasOne(OverlaySetting::class);
+    }
 }
